@@ -196,28 +196,9 @@ h1 span{
 
 /* bike container */
 
-/* .bike-container{
-width: 100%;
-height: 100vh;
-margin-top: 40px;
-}
 
 
-.bike-images{
-    display: flex;
-    justify-content:center;
-
-}
-
-
-.bike-card1 a , .bike-card a{
-    text-decoration: none;
-    color:white;
-    text-transform: uppercase;
-} */
-
-
-/* .bike-container {
+.bike-container {
     width: 100%;
     height: 100vh;
     margin-top: 40px;
@@ -273,7 +254,7 @@ margin-top: 40px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     text-align: center;
-  } */
+  } 
 /* work on this  */
 
 
