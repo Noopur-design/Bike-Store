@@ -1,3 +1,7 @@
+
+
+
+
 let bar = document.querySelector('.bar');
 let closeicon = document.querySelector('.close-icon');
 let navlinks = document.querySelector('.navlinks');
@@ -45,3 +49,35 @@ gsap.from("h1 span" , {
     opacity:0,
     stagger:0.1,
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Ensure the DOM is fully loaded before executing
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = gsap.utils.toArray('.scrollpage1');
+
+    gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1), // Move sections horizontally
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".horizontal-scroll-container",
+            pin: true, // Pin the container during scroll
+            scrub: 2, // Smooth scroll
+            snap: 1 / (sections.length - 1), // Snap to each section
+            end: () => "+=" + document.querySelector('.horizontal-scroll-container').offsetWidth // End based on the width of the container
+        }
+    });
+});
+
