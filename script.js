@@ -81,3 +81,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+
+  // Function to show the selected section and hide the others
+  function showSection(sectionId) {
+    // Hide all sections
+    document.querySelectorAll('.newlaucnhesitem > section').forEach(section => {
+      section.style.display = 'none';
+    });
+
+    // Show the selected section
+    document.querySelector(sectionId).style.display = 'flex';
+  }
+
+  // Add event listeners to the category links
+  document.querySelectorAll('.category a').forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();  // Prevent default anchor behavior
+      const targetSection = this.getAttribute('href');  // Get the target section from href
+      showSection(targetSection);  // Show the selected section
+    });
+  });
+
+  // Initially hide all sections except new launches
+  window.onload = function() {
+    showSection('#newlaunches');
+  };
+

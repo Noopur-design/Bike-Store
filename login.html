@@ -35,6 +35,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    border-radius: 10px 10px 0 0 ;
 }
 
 .logo img {
@@ -67,19 +68,19 @@ nav {
 }
 
 .navlinks.active {
-    display: flex; /* Show navigation when active */
+    display: flex;
 }
 
 ul {
-    display: flex; /* Keep items in a row */
-    flex-direction: column; /* Stack items vertically in fullscreen */
-    align-items: center; /* Center items horizontally */
-    margin: 0; /* Reset margin for the ul */
-    padding: 0; /* Reset padding for the ul */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin: 0; 
+    padding: 0; 
 }
 
 ul li {
-    margin-bottom: 20px; /* Space between items */
+    margin-bottom: 20px; 
 }
 
 ul a {
@@ -154,10 +155,9 @@ ul a:hover::after {
       .login-container {
         background-color: #fff;
         padding: 60px;
-        border-radius: 10px;
+        border-radius: 0 0 10px 10px    ;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         width: 500px;
-
       }
 
       h2 {
@@ -331,17 +331,15 @@ let bar = document.querySelector('.bar');
 let closeicon = document.querySelector('.close-icon');
 let navlinks = document.querySelector('.navlinks');
 
-// Function to toggle navigation menu visibility
 function toggleNav() {
     navlinks.classList.toggle('active');
 
-    // Toggle the display of the bar and close icon based on navlinks visibility
     if (navlinks.classList.contains('active')) {
-        bar.style.display = 'none';  // Hide bar when nav is active
-        closeicon.style.display = 'block'; // Show close icon
+        bar.style.display = 'none'; 
+        closeicon.style.display = 'block'; 
     } else {
-        bar.style.display = 'block'; // Show bar when nav is inactive
-        closeicon.style.display = 'none'; // Hide close icon
+        bar.style.display = 'block'; 
+        closeicon.style.display = 'none'; 
     }
 }
     </script>
