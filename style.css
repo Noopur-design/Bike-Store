@@ -601,6 +601,8 @@ footer {
 .footer-section ul li a {
   text-decoration: none;
   color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-bottom {
@@ -612,16 +614,7 @@ footer {
   position: relative;
 }
 
-footer::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: #ccc; /* Line color */
-  margin-top: 30px; /* Spacing above the line */
-}
+
 
 /* Media Queries for smaller screens */
 @media screen and (max-width: 768px) {
@@ -646,7 +639,7 @@ text-align: center;
   .footer-section ul li a {
     display: block; 
     text-align: center;
-    margin: 0;
+    margin: 2px;
   }
 
 

@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login page</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- Google  -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <!-- Facebook  -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
     <style>
-      /* Basic reset and styles */
+  
       * {
         margin: 0;
         padding: 0;
@@ -25,137 +27,132 @@
         background-color: #2c2c2f;
         font-weight: 900;
       }
-  
 
       header {
-    width: 100%;
-    height: 80px;
-    background-color: #1a1a1a;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    border-radius: 10px 10px 0 0 ;
-}
+        width: 100%;
+        height: 80px;
+        background-color: #1a1a1a;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        border-radius: 10px 10px 0 0;
+      }
 
-.logo img {
-    width: 60px;
-    height: 60px;
-    filter: brightness(0) invert(1);
-    margin-left: 15px;
-}
+      .logo img {
+        width: 60px;
+        height: 60px;
+        filter: brightness(0) invert(1);
+        margin-left: 15px;
+      }
 
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-}
+      nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+      }
 
-.navlinks {
-    display: none;
-    position: fixed; 
-    top: 0;
-    right: 0;
-    width: 100%; 
-    height: 100vh; 
-    background-color: rgba(0, 0, 0, 0.95); 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    z-index: 999;
-}
+      .navlinks {
+        display: none;
+        position: fixed; 
+        top: 0;
+        right: 0;
+        width: 100%; 
+        height: 100vh; 
+        background-color: rgba(0, 0, 0, 0.95); 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        z-index: 999;
+      }
 
-.navlinks.active {
-    display: flex;
-}
+      .navlinks.active {
+        display: flex;
+      }
 
-ul {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    margin: 0; 
-    padding: 0; 
-}
+      ul {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        margin: 0; 
+        padding: 0; 
+      }
 
-ul li {
-    margin-bottom: 20px; 
-}
+      ul li {
+        margin-bottom: 20px; 
+      }
 
-ul a {
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    position: relative;
-    padding: 10px 0; 
-}
+      ul a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        position: relative;
+        padding: 10px 0; 
+      }
 
-ul a::after {
-    position: absolute;
-    content: " ";
-    bottom: -5px;
-    height: 2px;
-    left: 0;
-    width: 0;
-    background-color: white;
-    transition: 0.3s;
-}
+      ul a::after {
+        position: absolute;
+        content: " ";
+        bottom: -5px;
+        height: 2px;
+        left: 0;
+        width: 0;
+        background-color: white;
+        transition: 0.3s;
+      }
 
-ul a:hover::after {
-    width: 100%;
-}
+      ul a:hover::after {
+        width: 100%;
+      }
 
-.btn {
-    background-color: rgb(8, 8, 31);
-    padding: 10px;
-    border-radius: 100px;
-    color: white;
-    border-color: transparent;
-    cursor: pointer;
-    margin-right: 40px;
-}
+      .btn {
+        background-color: rgb(8, 8, 31);
+        padding: 10px;
+        border-radius: 100px;
+        color: white;
+        border-color: transparent;
+        cursor: pointer;
+        margin-right: 40px;
+      }
 
-.btn a {
-    text-decoration: none;
-    color: white;
-}
+      .btn a {
+        text-decoration: none;
+        color: white;
+      }
 
-.bar {
-    display: block;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
+      .bar {
+        display: block;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
 
-.close-icon {
-    font-size: 30px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    cursor: pointer;
-    color: white;
-    margin-top: 200px;
-    margin-right: 200px;
-}
+      .close-icon {
+        font-size: 30px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+        color: white;
+        margin-top: 200px;
+        margin-right: 200px;
+      }
 
-
-.sign-up a {
-    color: white;
-    border-radius: 50%;
-    border: 1px solid white;
-    /* padding: 12px;
-    margin: 15px; */
-}
- 
+      .sign-up a {
+        color: white;
+        border-radius: 50%;
+        border: 1px solid white;
+      }
 
       .login-container {
         background-color: #fff;
         padding: 60px;
-        border-radius: 0 0 10px 10px    ;
+        border-radius: 0 0 10px 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         width: 500px;
       }
@@ -218,130 +215,162 @@ ul a:hover::after {
       .login-container .sign-up {
         text-align: center;
         margin-top: 5px;
-
       }
 
       .login-container .sign-up a {
         color: #007bff;
         text-decoration: none;
-     
       }
 
       .login-container .sign-up a:hover {
         text-decoration: underline;
       }
 
-      .ptag{
+      .ptag {
         margin: 10px;
         display: flex;
         justify-content: center;
       }
-      .ref{
+
+      .ref {
         display: flex;
         justify-content: center;
         gap: 30px;
-        filter: drop-shadow(2px 2px 5px #ccc) 
+        filter: drop-shadow(2px 2px 5px #ccc);
       }
-      .loginby {
-         width: 30%;
-         height: auto;
-         padding: 10px;
-         display: flex;
-         justify-content: center;
-        background-color: #efefef;
-            }
-.google img{
-  width: 30px;  
-  height: 30px;
-}
-.fb img{ 
-  width: 30px;
-   height: 30px;
-}
 
+      .loginby {
+        width: 30%;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        background-color: #efefef;
+      }
+
+      .google img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .fb img {
+        width: 30px;
+        height: 30px;
+      }
     </style>
   </head>
   <body>
-   
     <div id="main">
+      <header>
+        <div class="logo">
+          <img src="/img/motorbike.png" alt="Logo" />
+        </div>
+        <nav>
+          <ul class="navlinks">
+            <li><a href="index.html">home</a></li>
+            <li><a href="Accessories.html">accessories</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="motercycle.html">motercycles</a></li>
+            <li><a href="scooter.html">scooters</a></li>
+            <li class="close-icon" onclick="toggleNav()" style="display: none;">
+              <i class="fa-solid fa-xmark"></i>
+            </li>
+          </ul>
+          <div class="bar" onclick="toggleNav()">
+            <i class="ri-menu-4-fill"></i>
+          </div>
+          <div class="close-icon" onclick="toggleNav()" style="display: none;">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
 
-        <header>
-            <div class="logo">
-                <img src="/img/motorbike.png" alt="Logo">
+          <button class="btn">
+            <a href="#">Check out <i class="fa-solid fa-cart-shopping"></i></a>
+          </button>
+        </nav>
+      </header>
+
+      <div class="login-container">
+        <h2>Login</h2>
+        <form>
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Enter your username" required />
+
+          <label for="Number">Number</label>
+          <input type="tel" name="number" id="number" pattern="[0-9]{10}" placeholder="Enter your mobile number" required />
+
+          <button type="submit">Login</button>
+
+          <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+          </div>
+
+          <div class="sign-up">
+            Don't have an account? <a href="/signup.html">Sign Up</a>
+          </div>
+
+          <div class="ptag" >
+            <p>or login with</p>
+          </div>
+          <div class="ref">
+            <div class="loginby google" onclick="handleGoogleLogin()">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Google_Logo_2023.png" alt="Google" />
             </div>
-            <nav>
-                <ul class="navlinks">
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="#">accessories</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">motercycles</a></li>
-                    <li><a href="#">scooters</a></li>
-                    <li class="close-icon" onclick="toggleNav()" style="display: none;"><i class="fa-solid fa-xmark"></i></li>
-                </ul>
-                <div class="bar" onclick="toggleNav()"><i class="ri-menu-4-fill"></i></div>
-                <div class="close-icon" onclick="toggleNav()" style="display: none;"><i class="fa-solid fa-xmark"></i></div>
-                
-                <button class="btn"><a href="#">Check out <i class="fa-solid fa-cart-shopping"></i></a></button> 
-            </nav>
-        </header>
-
-    <div class="login-container">
-      <h2>Login</h2>
-      <form>
-        <label for="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          placeholder="Enter your username"
-          required
-        />
-
-        <label for="Number">Number</label>
-       <input type="tel" name="number" id="number" pattern="[0-9]{10}" placeholder="Enter your mobile number" required>
-
-        <button type="submit">Login</button>
-
-        <div class="forgot-password">
-          <a href="#">Forgot Password?</a>
-        </div>
-
-        <div class="sign-up">
-          Don't have an account? <a href="/signup.html">Sign Up</a>
-        </div>
-
-        <div class="ptag">
-          <p>Sign up with</p>
-        </div>
-      </form>
- <div class="ref">
-  <div class="loginby">
-    <span class="google"> <img src="img/google png.png" alt=""> </span>
-  
-  </div>
-  <div class="loginby">
-  <span class="fb"><img src="img/fb.png" alt=""></span>
-</div>
- </div>
-    </div>
+            <div class="loginby fb" onclick="handleFBLogin()">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
 
     <script>
-let bar = document.querySelector('.bar');
-let closeicon = document.querySelector('.close-icon');
-let navlinks = document.querySelector('.navlinks');
+      // Google login
+      function handleGoogleLogin() {
+        const clientID = "1062622466956-issksl7s6nht4bdcv8tdrmtfrdm3neo7.apps.googleusercontent.com"; // Your Google Client ID
+        const google = window.google;
+        google.accounts.id.initialize({
+          client_id: clientID,
+          callback: handleCredentialResponse,
+        });
+        google.accounts.id.prompt();
+      }
 
-function toggleNav() {
-    navlinks.classList.toggle('active');
+      function handleCredentialResponse(response) {
+        console.log("Encoded JWT ID token: " + response.credential);
+      
+      }
 
-    if (navlinks.classList.contains('active')) {
-        bar.style.display = 'none'; 
-        closeicon.style.display = 'block'; 
-    } else {
-        bar.style.display = 'block'; 
-        closeicon.style.display = 'none'; 
-    }
-}
+      // Facebook login
+      window.fbAsyncInit = function () {
+        FB.init({
+          appId: "YOUR_FB_APP_ID",
+          cookie: true,
+          xfbml: true,
+          version: "v11.0",
+        });
+      };
+
+      function handleFBLogin() {
+        FB.login(function (response) {
+          if (response.authResponse) {
+            console.log("Welcome! Fetching your information.... ");
+            FB.api("/me", function (response) {
+              console.log("Good to see you, " + response.name + ".");
+            
+            });
+          } else {
+            console.log("User cancelled login or did not fully authorize.");
+          }
+        });
+      }
+
+      // Navigation toggle function
+      function toggleNav() {
+        const navLinks = document.querySelector('.navlinks');
+        const closeIcon = document.querySelector('.close-icon');
+        navLinks.classList.toggle('active');
+        closeIcon.style.display = closeIcon.style.display === 'none' ? 'block' : 'none';
+      }
     </script>
   </body>
 </html>

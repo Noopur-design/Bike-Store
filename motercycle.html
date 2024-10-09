@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Store</title>
+    <link rel="stylesheet" href="motercycle.css"> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="/img/motorbike.png" alt="Logo">
+        </div>
+        <nav>
+            <ul class="navlinks">
+                <li><a href="index.html">home</a></li>
+                <li><a href="Accessories.html">accessories</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="motercycle.html">motercycles</a></li>
+                <li><a href="scooter.html">scooters</a></li>
+            </ul>
+            <div class="bar" onclick="toggleNav()" ><i class="ri-menu-4-fill"></i></div>
+            <div class="close-icon" onclick="toggleNav()"><i class="fa-solid fa-xmark"></i></div>
+            <button class="btn"><a href="add-to-cart.html">Check out <i class="fa-solid fa-cart-shopping"></i></a></button> 
+            <div class="sign-up"><a href="/login.html"><i class="fa-regular fa-user"></i></a></div>
+        </nav>
+    </header>
+
+
+    <div class="bike-page-heading">
+        <h1>Welcome to the bike store </h1>
+    </div>
+
+
+
+    <section class="bike-grid">
+        <div class="bike-card">
+            <img src="images/motercycle1.webp" alt="Yamaha MT 15 V2.0">
+            <h2><a href="product-page.html">Yamaha MT 15 V2.0</a></h2>
+            <p>The Yamaha MT15 V2 is an entry-level naked streetfighter based on the Yamaha R15.</p>
+            <p class="price">Rs.1.68 - 1.73 Lakh</p>
+            <a href="cart.html" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="bike-card">
+            <img src="images/motercycle2.avif" alt="Bike 2">
+            <h2><a href="product-page.html">Jawa 42</a></h2>
+            <p>The Jawa 42 is a neo-retro roadster and the brand’s cheapest bike in India. It is powered by the updated 294cc, single-cylinder, J-Panther.</p>
+            <p class="price">Rs.1.73 - 1.98 Lakh</p>
+            <a href="cart.html" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="bike-card">
+            <img src="images/motercycle3.webp" alt="Bike 3">
+            <h2><a href="product-page.html">Hero Xtreme 125R</a></h2>
+            <p>The Hero Xtreme 125R is the cheapest 125cc sporty commuter bike with ABS in India.</p>
+            <p class="price">Rs.95,000 - 99,500</p>
+            <a href="cart.html" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="bike-card">
+            <img src="images/motercycle4.webp" alt="Bike 3">
+            <h2><a href="product-page.html">Kawasaki Ninja ZX-10R</a></h2>
+            <p>Kawasaki has teased the launch of the 2021 Ninja ZX-10R on its social media along with the new Ninja 300 BS6.</p>
+            <p class="price">Rs.16.79 Lakh</p>
+            <a href="cart.html" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="bike-card">
+            <img src="images/motercycle5.webp" alt="Bike 3">
+            <h2><a href="product-page.html">Bajaj Pulsar NS 125</a></h2>
+            <p>The Bajaj Pulsar NS125 is an entry-level naked street bike and a sportier sibling of the Bajaj Pulsar 125.</p>
+            <p class="price">Rs.1.01 Lakh</p>
+            <a href="cart.html" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="bike-card">
+            <img src="images/motercycle6.webp" alt="Bike 3">
+            <h2><a href="product-page.html">Royal Enfield Hunter 350</a></h2>
+            <p>The Hunter 350 is the most affordable bike from Royal Enfield and was designed to attract first-time Royal Enfield buyers who might find bikes like the Classic or Bullet a bit too intimidating.</p>
+            <p class="price">Rs.1.50 - 1.75 Lakh</p>
+            <a href="cart.html" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="bike-card">
+            <img src="images/motercycle7.webp" alt="Bike 3">
+            <h2><a href="product-page.html">Yezdi Adventure</a></h2>
+            <p>The Yezdi Adventure is a 334cc adventure-touring bike from Jawa Yezdi Motorcycles. The ADV has a rugged design, similar to the now-discontinued Himalayan 411.</p>
+            <p class="price">Rs.2.10 - 2.20 Lakh</p>
+            <a href="cart.html" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="bike-card">
+            <img src="images/motercycle8.webp" alt="BMW G 310 GS motorcycle">
+            <h2>
+                <a href="product-page.html">BMW G 310 GS</a>  
+            </h2>
+            <p>The G 310 GS is powered by a BS6-compliant 313cc liquid-cooled single-cylinder engine that produces 34PS at 9,500rpm and 28Nm at 7,500rpm -- same as before. Its 6-speed transmission now features a slip-and-assist clutch.</p>
+            <p class="price">Rs. 3.30 Lakh</p>
+            <a href="cart.html" class="add-to-cart">Add to Cart</a>
+        </div>
+        
+    </section>
+    
+
+
+    <footer>
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h2>About Us</h2>
+            <p>We offer the best bikes and services to help you get the most out of your riding experience. Join us for an exciting journey!</p>
+          </div>
+    
+          <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="scooter.html">Scooter</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="Accessories.html">accessories</a></li>
+            </ul>
+          </div>
+    
+          <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>Email: support@bikestore.com</p>
+            <p>Phone: +1 234 567 890</p>
+          </div>
+        </div>
+    
+        <div class="footer-bottom">
+          <p>© 2024 Bike Store. All Rights Reserved.</p>
+        </div>
+      </footer>
+<script src="/script.js"></script>
+</body>
+</html>
