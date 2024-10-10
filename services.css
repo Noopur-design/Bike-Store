@@ -81,6 +81,7 @@
     text-wrap: nowrap;
     border-color: transparent;
     cursor: pointer;
+    margin-right: 40px;
   }
   
   .btn a {
